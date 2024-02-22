@@ -17,21 +17,17 @@
   top: 20px;
   left: 20px;
 }
-.bgImgWrapper {
-  padding-bottom: 18px;
-}
 .lineWrapper {
-  height: 8px;
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  height: 8px;
+  width: 100%;
   box-shadow: inset 0px 3.44px 2.58px 0px rgb(251, 248, 255),
     0px 3.44px 3.44px 0px rgba(0, 0, 0, 0.06),
     inset 0px -1.72px 3.44px 0px rgb(174, 123, 227);
   background: rgb(235, 216, 255);
-
-  width: 100%;
 }
 .avatarWrapper {
   position: absolute;
@@ -41,7 +37,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -54,7 +49,7 @@
   border-radius: 50%;
 }
 .descriptionWrapper {
-  padding-top: 62px;
+  padding-top: 88px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,6 +75,11 @@
   font-weight: 600;
   line-height: 22px;
   letter-spacing: 0;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    color: rgb(100, 71, 188);
+    transform: scale(1.05);
+  }
 }
 .followingBtn {
   background: rgb(92, 211, 168);

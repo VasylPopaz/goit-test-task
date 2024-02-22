@@ -1,0 +1,56 @@
+.filterContainer {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+}
+.filterToggle {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgb(195, 189, 202);
+  border-radius: 10.31px;
+  cursor: pointer;
+  color: rgb(55, 55, 55);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0;
+  transition: all 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(100, 71, 188);
+    color: white;
+  }
+}
+.list {
+  padding: 10px 20px;
+  background: rgb(195, 189, 202);
+  border-radius: 10.31px;
+  overflow: hidden;
+
+  width: 150px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(100, 71, 188);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0;
+  transition: all 250ms ease-in-out;
+}
+.list li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.listItem {
+  padding: 4px 8px;
+  border-radius: 10.31px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.listItem:hover {
+  color: rgb(100, 71, 188);
+  background-color: #ddd;
+}

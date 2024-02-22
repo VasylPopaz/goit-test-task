@@ -1,11 +1,14 @@
 import { UsersListItem } from 'components';
-import { useUsers } from 'hooks/useUsers';
+import { useUsers } from 'hooks';
+//
 import s from './UsersList.module.css';
+
 export const UsersList = () => {
-  const { users } = useUsers();
+  const { filteredUsers } = useUsers();
+
   return (
     <ul className={s.list}>
-      {users.map(user => (
+      {filteredUsers.map(user => (
         <UsersListItem key={user.id} {...user} />
       ))}
     </ul>
