@@ -1,7 +1,19 @@
-import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getUsers } from '../redux/operations';
+import { UsersList } from 'components/UsersList/UsersList';
 
 const Tweets = () => {
-  return <section>Tweets</section>;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUsers());
+  }, [dispatch]);
+
+  return (
+    <section>
+      <UsersList />
+    </section>
+  );
 };
 
 export default Tweets;
