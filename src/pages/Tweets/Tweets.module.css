@@ -1,7 +1,16 @@
 .tweets {
+  padding-block: 80px;
   text-align: center;
 }
 .wrapper {
   text-align: left;
   margin-bottom: 20px;
+}
+.title {
+  text-align: center;
+  color: var(--background-color);
+  font-size: 36px;
+}
+.loaderWrapper {
+  min-height: 100px;
 }

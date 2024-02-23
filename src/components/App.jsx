@@ -1,8 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
 //
 import { SharedLayout } from '../components';
-import Home from 'pages/Home';
-import Tweets from 'pages/Tweets/Tweets';
+
+const Home = lazy(() => import('pages/Home/Home'));
+const Tweets = lazy(() => import('pages/Tweets/Tweets'));
 
 export const App = () => {
   return (

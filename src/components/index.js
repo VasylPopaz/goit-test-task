@@ -4,3 +4,4 @@ export * from './UsersListItem/UsersListItem';
 export * from './LoadMoreBtn/LoadMoreBtn';
 export * from './GoBackLink/GoBackLink';
 export * from './Filter/Filter';
+export * from './Loader/Loader';

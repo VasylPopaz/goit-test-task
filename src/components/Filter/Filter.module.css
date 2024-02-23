@@ -7,10 +7,10 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  background: rgb(195, 189, 202);
+  background-color: var(--background-color);
   border-radius: 10.31px;
   cursor: pointer;
-  color: rgb(55, 55, 55);
+  color: var(--primary-font-color);
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -19,13 +19,13 @@
 
   &:hover,
   &:focus {
-    background-color: rgb(100, 71, 188);
+    background-color: var(--accent-color);
     color: white;
   }
 }
 .list {
   padding: 10px 20px;
-  background: rgb(195, 189, 202);
+  background-color: var(--background-color);
   border-radius: 10.31px;
   overflow: hidden;
 
@@ -33,7 +33,7 @@
   display: block;
   position: absolute;
   z-index: 1;
-  background-color: rgb(100, 71, 188);
+  background-color: var(--accent-color);
   color: white;
   font-size: 18px;
   font-weight: 600;
@@ -51,6 +51,6 @@
   transition: all 250ms ease-in-out;
 }
 .listItem:hover {
-  color: rgb(100, 71, 188);
-  background-color: #ddd;
+  color: var(--accent-color);
+  background-color: var(--background-color);
 }

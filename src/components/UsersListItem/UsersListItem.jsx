@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 //
-import { getSeparatedNumber } from 'helpers';
-import { updateUser } from '../../appRedux';
+import { updateUser } from '../../storeRedux';
 import { useUsers } from 'hooks';
+import { getSeparatedNumber } from 'helpers';
 //
 import s from './UsersListItem.module.css';
 import logoImg from '../../assets/images/logo.png';
@@ -52,7 +52,7 @@ export const UsersListItem = ({
           <img
             className={s.userAvatar}
             src={avatar}
-            alt=""
+            alt="User avatar"
             width={65}
             height={65}
           />

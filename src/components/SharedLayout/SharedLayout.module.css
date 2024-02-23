@@ -1,11 +1,30 @@
-.header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
 .container {
   margin: 0 auto;
   max-width: 1440px;
-  padding: 40px 100px;
+  padding-inline: 100px;
+}
+.header {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+.list {
+  display: flex;
+  gap: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0;
+  transition: all 250ms ease-in-out;
+}
+.navLink {
+  display: inline-block;
+  padding-block: 20px;
+  position: relative;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    color: rgb(92, 211, 168);
+  }
 }

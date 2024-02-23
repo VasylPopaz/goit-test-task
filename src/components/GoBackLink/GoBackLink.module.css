@@ -8,12 +8,12 @@
 .link {
   padding: 10px;
   display: inline-block;
-  width: 250px;
+  width: 200px;
   text-align: center;
-  background: rgb(195, 189, 202);
+  background: var(--background-color);
   border-radius: 10.31px;
 
-  color: rgb(55, 55, 55);
+  color: var(--primary-font-color);
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -21,8 +21,7 @@
   transition: all 250ms ease-in-out;
 
   &:hover {
-    width: 200px;
-    background-color: rgb(87, 30, 201);
+    background-color: var(--accent-color);
     color: white;
   }
 }
@@ -39,11 +38,10 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: calc(50%);
-  right: calc(50%-5px);
+  top: 50%;
   transform: translateY(-50%);
-  fill: rgb(87, 30, 201);
-  stroke: white;
+  fill: var(--accent-color);
+  stroke: var(--background-color);
   transition: all 0.35s;
 }
 .link:hover + .icon {

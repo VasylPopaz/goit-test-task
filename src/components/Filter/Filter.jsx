@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 //
-import { changeFilter } from 'appRedux';
+import { changeFilter } from 'storeRedux';
 import { useUsers } from 'hooks';
 import { getFilterValue } from 'helpers';
 //
