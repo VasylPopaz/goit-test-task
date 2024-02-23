@@ -56,6 +56,7 @@ const Tweets = () => {
 
   return (
     <section className={s.tweets}>
+      {isLoading ? <Loader /> : null}
       <div className={s.wrapper}>
         <GoBackLink to={backLinkHref.current} />
         <Filter />
@@ -67,8 +68,6 @@ const Tweets = () => {
         </h2>
       ) : null}
       <UsersList />
-      <div className={s.loaderWrapper}> {isLoading ? <Loader /> : null}</div>
-
       {showLoadMore ? <LoadMoreBtn onClick={handleLoadMoreClick} /> : null}
     </section>
   );

@@ -60,7 +60,7 @@ export const UsersListItem = ({
       </div>
 
       <div className={s.descriptionWrapper}>
-        <p className={s.descriptionText}>{tweets} TWEETS</p>
+        <p className={s.descriptionText}>{getSeparatedNumber(tweets)} TWEETS</p>
         <p className={s.descriptionText}>
           {getSeparatedNumber(followers)} FOLLOWERS
         </p>
