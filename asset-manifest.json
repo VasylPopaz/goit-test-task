@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/goit-test-task/static/css/main.669f6d2b.css",
-    "main.js": "/goit-test-task/static/js/main.adf74d4f.js",
+    "main.css": "/goit-test-task/static/css/main.40d25c83.css",
+    "main.js": "/goit-test-task/static/js/main.c6677ef5.js",
     "static/css/936.9503f310.chunk.css": "/goit-test-task/static/css/936.9503f310.chunk.css",
     "static/js/936.63beabbd.chunk.js": "/goit-test-task/static/js/936.63beabbd.chunk.js",
     "static/css/535.5d988710.chunk.css": "/goit-test-task/static/css/535.5d988710.chunk.css",
-    "static/js/535.db1e3841.chunk.js": "/goit-test-task/static/js/535.db1e3841.chunk.js",
+    "static/js/535.b2cb3846.chunk.js": "/goit-test-task/static/js/535.b2cb3846.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/goit-test-task/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
     "static/media/Montserrat-Medium.ttf": "/goit-test-task/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
     "static/media/qan-image@2x.png": "/goit-test-task/static/media/qan-image@2x.74a3d0a511d2f9354195.png",
@@ -15,15 +15,15 @@
     "index.html": "/goit-test-task/index.html",
     "static/media/logo@2x.webp": "/goit-test-task/static/media/logo@2x.2725c35adff52472f30b.webp",
     "static/media/logo.webp": "/goit-test-task/static/media/logo.726c6bed1803937e3dc8.webp",
-    "main.669f6d2b.css.map": "/goit-test-task/static/css/main.669f6d2b.css.map",
-    "main.adf74d4f.js.map": "/goit-test-task/static/js/main.adf74d4f.js.map",
+    "main.40d25c83.css.map": "/goit-test-task/static/css/main.40d25c83.css.map",
+    "main.c6677ef5.js.map": "/goit-test-task/static/js/main.c6677ef5.js.map",
     "936.9503f310.chunk.css.map": "/goit-test-task/static/css/936.9503f310.chunk.css.map",
     "936.63beabbd.chunk.js.map": "/goit-test-task/static/js/936.63beabbd.chunk.js.map",
     "535.5d988710.chunk.css.map": "/goit-test-task/static/css/535.5d988710.chunk.css.map",
-    "535.db1e3841.chunk.js.map": "/goit-test-task/static/js/535.db1e3841.chunk.js.map"
+    "535.b2cb3846.chunk.js.map": "/goit-test-task/static/js/535.b2cb3846.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.669f6d2b.css",
-    "static/js/main.adf74d4f.js"
+    "static/css/main.40d25c83.css",
+    "static/js/main.c6677ef5.js"
   ]
 }
