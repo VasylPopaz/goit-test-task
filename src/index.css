@@ -65,6 +65,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-inline: 100px;
+}
 .active {
   color: white;
 }

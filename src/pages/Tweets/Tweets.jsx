@@ -11,7 +11,7 @@ import { getFilterValue } from 'helpers';
 import s from './Tweets.module.css';
 
 const Tweets = () => {
-  const { isLoading, users, filteredUsers, page, filter } = useUsers();
+  const { isLoading, users, filteredUsers, page, filter, error } = useUsers();
 
   const dispatch = useDispatch();
 
@@ -57,18 +57,30 @@ const Tweets = () => {
   return (
     <section className={s.tweets}>
       {isLoading ? <Loader /> : null}
-      <div className={s.wrapper}>
-        <GoBackLink to={backLinkHref.current} />
-        <Filter />
+      <div className={`container`}>
+        {error ? (
+          <h2 className={s.errorTitle}>
+            Sorry, something went wrong. Please try again.
+          </h2>
+        ) : (
+          <>
+            <div className={s.wrapper}>
+              <GoBackLink to={backLinkHref.current} />
+              <Filter />
+            </div>
+            {!filteredUsers.length && !isLoading ? (
+              <h2 className={s.title}>
+                No users with status "{getFilterValue(filter)}". Try choosing
+                another filter value.
+              </h2>
+            ) : null}
+            <UsersList />
+            {showLoadMore ? (
+              <LoadMoreBtn onClick={handleLoadMoreClick} />
+            ) : null}
+          </>
+        )}
       </div>
-      {!filteredUsers.length && !isLoading ? (
-        <h2 className={s.title}>
-          No users with status "{getFilterValue(filter)}". Try choosing another
-          filter value.
-        </h2>
-      ) : null}
-      <UsersList />
-      {showLoadMore ? <LoadMoreBtn onClick={handleLoadMoreClick} /> : null}
     </section>
   );
 };

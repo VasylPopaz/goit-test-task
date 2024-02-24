@@ -77,11 +77,20 @@
   line-height: 22px;
   letter-spacing: 0;
   transition: all 250ms ease-in-out;
-  &:not([disabled]):hover {
+  &:not([disabled]):hover,
+  &:not([disabled]):focus {
     color: var(--accent-color);
     transform: scale(1.05);
+  }
+  &:disabled {
+    cursor: not-allowed;
   }
 }
 .followingBtn {
   background-color: rgb(92, 211, 168);
+}
+.userLoader {
+  position: absolute;
+  top: 27%;
+  right: 8px;
 }

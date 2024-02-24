@@ -1,11 +1,12 @@
 .home {
-  padding-block: 80px;
+  padding-block: 200px;
+}
+.homeContainer {
   display: flex;
   flex-direction: column;
   gap: 15px;
   justify-content: center;
   align-items: center;
-  min-height: 700px;
 }
 .title {
   text-align: center;
@@ -27,7 +28,8 @@
   line-height: 22px;
   letter-spacing: 0;
   transition: all 250ms ease-in-out;
-  &:not([disabled]):hover {
+  &:hover,
+  &:focus {
     background-color: var(--accent-color);
     color: var(--background-color);
     transform: scale(1.05);

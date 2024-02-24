@@ -8,7 +8,7 @@ import s from './SharedLayout.module.css';
 export const SharedLayout = () => {
   return (
     <>
-      <header className={`${s.container} ${s.header}`}>
+      <header className={`container ${s.header}`}>
         <nav>
           <ul className={s.list}>
             <li>
@@ -24,7 +24,7 @@ export const SharedLayout = () => {
           </ul>
         </nav>
       </header>
-      <main className={s.container}>
+      <main>
         <Suspense fallback={<Loader />}>
           {' '}
           <Outlet />

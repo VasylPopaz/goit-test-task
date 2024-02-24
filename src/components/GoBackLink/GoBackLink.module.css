@@ -20,7 +20,8 @@
   letter-spacing: 0;
   transition: all 250ms ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--accent-color);
     color: white;
   }
@@ -44,6 +45,7 @@
   stroke: var(--background-color);
   transition: all 0.35s;
 }
-.link:hover + .icon {
+.link:hover + .icon,
+.link:focus + .icon {
   left: -17%;
 }

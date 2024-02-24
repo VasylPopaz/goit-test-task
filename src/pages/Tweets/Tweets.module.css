@@ -1,5 +1,5 @@
 .tweets {
-  padding-block: 80px;
+  padding-block: 40px;
   text-align: center;
 }
 .wrapper {
@@ -9,5 +9,10 @@
 .title {
   text-align: center;
   color: var(--background-color);
+  font-size: 36px;
+}
+.errorTitle {
+  text-align: center;
+  color: salmon;
   font-size: 36px;
 }

@@ -18,7 +18,6 @@ const usersSlice = createSlice({
       state.page += 1;
     },
     changeFilter: (state, { payload }) => {
-      console.log('payload', payload);
       state.filter = payload;
     },
   },
@@ -33,18 +32,14 @@ const usersSlice = createSlice({
           if (user.id === payload.id) return payload;
           return user;
         });
-        state.isLoading = false;
       })
-      .addMatcher(isAnyOf(getUsers.pending, updateUser.pending), state => {
+      .addMatcher(isAnyOf(getUsers.pending), state => {
         state.isLoading = true;
       })
-      .addMatcher(
-        isAnyOf(getUsers.rejected, updateUser.rejected),
-        (state, { payload }) => {
-          state.error = payload;
-          state.isLoading = false;
-        }
-      );
+      .addMatcher(isAnyOf(getUsers.rejected), (state, { payload }) => {
+        state.error = payload;
+        state.isLoading = false;
+      });
   },
 });
 

@@ -1,8 +1,3 @@
-.container {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding-inline: 100px;
-}
 .header {
   background-color: var(--accent-color);
   border-radius: 10px;
@@ -24,7 +19,8 @@
   padding-block: 20px;
   position: relative;
   transition: all 250ms ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus {
     color: rgb(92, 211, 168);
   }
 }

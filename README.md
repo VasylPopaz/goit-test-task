@@ -1,25 +1,26 @@
 # Tweets App
 
-This Tweets application is built using React and Redux Toolkit. The app allows
-users to view tweets, manage subscriptions to other users, and filter users
-based on status.
+Welcome to Tweets! This web application allows you to explore tweets from
+various users.
 
 # Functionality
 
-1. View Tweets The tweets page of the application displays a list of tweets from
-   all users.
+1. The Home page greets you with a welcoming headline and a "Get Started"
+   button. Clicking this button will direct you to the Tweets page.
 
-2. Manage followings Users can follow other users. On the tweets page, there is
-   a "Follow" button that allows users to manage their followings.
+2. On the Tweets page, you can view the number of tweets, followers, and the
+   user's avatar. Additionally, you have the option to follow a user by clicking
+   the "Follow" button. To navigate back through your browser history, you can
+   use the "Go Back" button.
 
-3. Filter Tweets by Status There is an option to filter tweets by following the
-   status. Users can choose a specific status, such as "Show All", "Follow",
-   "Followings", to view tweets that match the selected status.
+3. User Filtering You can filter users based on their Follow status, with three
+   options: Show All - Displays all users. Follow -Displays users you don't
+   follow. Following- Displays users you are following.
 
 4. Pagination The tweets are displayed in sets of three cards per page.
 
-5. Load More A "Load More" button is available at the bottom of the tweet list.
-   Clicking this button dynamically loads the next set of three cards.
+5. A "Load More" button is available at the bottom of the user list. Clicking
+   this button dynamically loads the next set of three cards.
 
 # Technologies Used
 
