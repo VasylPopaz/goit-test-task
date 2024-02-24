@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgoit_test_task=self.webpackChunkgoit_test_task||[]).push([[936],{4936:function(e,t,s){s.r(t),s.d(t,{default:function(){return c}});var n=s(1087),r="Home_home__CMw1J",i="Home_title__L087v",o="Home_link__2zIq5",a=s(184),c=function(){return(0,a.jsxs)("section",{className:r,children:[(0,a.jsx)("h1",{className:i,children:"Explore your opinions, meet the news, and create history in every tweet."}),(0,a.jsx)(n.rU,{className:o,to:"/tweets",children:"Get Started"})]})}}}]);
-//# sourceMappingURL=936.335838ca.chunk.js.map
