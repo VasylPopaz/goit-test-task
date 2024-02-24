@@ -1,9 +1,17 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import throttle from 'lodash.throttle';
 import { toast } from 'react-toastify';
 //
-import { UsersList, LoadMoreBtn, GoBackLink, Filter, Loader } from 'components';
+import {
+  UsersList,
+  LoadMoreBtn,
+  GoBackLink,
+  Filter,
+  Loader,
+  ScrollUpBtn,
+} from 'components';
 import { getUsers, increasePage } from 'storeRedux';
 import { useUsers } from 'hooks';
 import { getFilterValue } from 'helpers';
@@ -12,12 +20,15 @@ import s from './Tweets.module.css';
 
 const Tweets = () => {
   const { isLoading, users, filteredUsers, page, filter, error } = useUsers();
+  const [isVisible, setIsVisible] = useState(false);
 
   const dispatch = useDispatch();
 
   const location = useLocation();
   const backLinkHref = useRef(location.state?.from ?? '/');
+
   const prevPageRef = useRef(page);
+  const scrollYRef = useRef(0);
 
   const showLoadMore = page < 5 && filteredUsers.length;
 
@@ -50,6 +61,19 @@ const Tweets = () => {
     }
   }, [dispatch, page]);
 
+  useEffect(() => {
+    const handleScroll = throttle(() => {
+      scrollYRef.current = window.scrollY;
+      setIsVisible(scrollYRef.current > 300);
+    }, 500);
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const handleLoadMoreClick = () => {
     dispatch(increasePage());
   };
@@ -78,6 +102,7 @@ const Tweets = () => {
             {showLoadMore ? (
               <LoadMoreBtn onClick={handleLoadMoreClick} />
             ) : null}
+            <ScrollUpBtn isVisible={isVisible} />
           </>
         )}
       </div>

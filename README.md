@@ -14,13 +14,20 @@ various users.
    use the "Go Back" button.
 
 3. User Filtering You can filter users based on their Follow status, with three
-   options: Show All - Displays all users. Follow -Displays users you don't
-   follow. Following- Displays users you are following.
+   options:
+
+   - Show All - displays all users
+   - Follow - displays users you don't follow
+   - Following - displays users you are following
 
 4. Pagination The tweets are displayed in sets of three cards per page.
 
 5. A "Load More" button is available at the bottom of the user list. Clicking
    this button dynamically loads the next set of three cards.
+
+6. "Scroll Up" button becomes visible after the user scrolls down the page. When
+   the button is clicked, the page will scroll to the top, and the button will
+   hide again.
 
 # Technologies Used
 
