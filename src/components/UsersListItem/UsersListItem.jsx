@@ -13,11 +13,6 @@ import logoImg2x from '../../assets/images/logo@2x.png';
 import logoImg1xWebp from '../../assets/images/logo.webp';
 import logoImg2xWebp from '../../assets/images/logo@2x.webp';
 
-import bgImg1x from '../../assets/images/qan-image.png';
-import bgImg2x from '../../assets/images/qan-image@2x.png';
-import bgImg1xWebp from '../../assets/images/qan-image.webp';
-import bgImg2xWebp from '../../assets/images/qan-image@2x.webp';
-
 export const UsersListItem = ({
   id,
   user,
@@ -64,33 +59,16 @@ export const UsersListItem = ({
           height={22}
         />
       </picture>
-      <picture>
-        <source
-          srcSet={`${bgImg1xWebp} 1x, ${bgImg2xWebp} 2x`}
-          type="image/webp"
-        />
-        <source srcSet={`${bgImg1x} 1x, ${bgImg2x} 2x`} type="image/png" />
-        <img
-          className={s.bgImg}
-          src={bgImg1x}
-          alt="GOIT"
-          width={308}
-          height={168}
-        />
-      </picture>
-      <div className={s.lineWrapper}>
-        {' '}
-        <div className={s.avatarWrapper}>
-          <img
-            className={s.userAvatar}
-            src={avatar}
-            alt="User avatar"
-            width={65}
-            height={65}
-          />
-        </div>
-      </div>
 
+      <div className={s.avatarWrapper}>
+        <img
+          className={s.userAvatar}
+          src={avatar}
+          alt="User avatar"
+          width={65}
+          height={65}
+        />
+      </div>
       <div className={s.descriptionWrapper}>
         <p className={s.descriptionText}>{getSeparatedNumber(tweets)} TWEETS</p>
         <p className={s.descriptionText}>

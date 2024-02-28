@@ -11,7 +11,7 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <BrowserRouter basename="/goit-test-task">
+    <BrowserRouter basename="/tweets-app">
       <App />
       <ToastContainer autoClose={2000} theme="dark" />
     </BrowserRouter>

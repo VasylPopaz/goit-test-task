@@ -1,7 +1,7 @@
 # Tweets App
 
 Welcome to Tweets! This web application allows you to explore tweets from
-various users.
+various users. ![tweets-app](/public/tweets-img.png)
 
 # Functionality
 
@@ -22,8 +22,8 @@ various users.
 
 4. Pagination The tweets are displayed in sets of three cards per page.
 
-5. A "Load More" button is available at the bottom of the user list. Clicking
-   this button dynamically loads the next set of three cards.
+5."Load More" button is available at the bottom of the user list. Clicking this
+button dynamically loads the next set of three cards.
 
 6. "Scroll Up" button becomes visible after the user scrolls down the page. When
    the button is clicked, the page will scroll to the top, and the button will
@@ -31,8 +31,7 @@ various users.
 
 # Technologies Used
 
+- HTML5, CSS3
 - React
 - Redux Toolkit
 - Axios
-
-# Author [Vasyl Popaz]

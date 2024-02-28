@@ -1,39 +1,78 @@
 .listItem {
   position: relative;
   text-align: center;
-  padding: 28px 36px 36px 36px;
+  padding: 196px 36px 36px 36px;
   width: 380px;
   border-radius: 20px;
   box-shadow: -2.58px 6.87px 20.62px 0px rgba(0, 0, 0, 0.23);
-  background: linear-gradient(
-    142.17deg,
-    rgb(71, 28, 169) -1.144%,
-    rgb(87, 54, 163) 59.141%,
-    rgb(75, 42, 153) 86.102%
-  );
+  background: center top 30px no-repeat url('/public/images/qan-image.png'),
+    linear-gradient(
+      142.17deg,
+      rgb(71, 28, 169) -1.144%,
+      rgb(87, 54, 163) 59.141%,
+      rgb(75, 42, 153) 86.102%
+    );
+}
+/* .webp */
+@supports (background: url('/public/images/qan-image.webp')) {
+  .listItem {
+    background: center top 30px no-repeat url('/public/images/qan-image.webp'),
+      linear-gradient(
+        142.17deg,
+        rgb(71, 28, 169) -1.144%,
+        rgb(87, 54, 163) 59.141%,
+        rgb(75, 42, 153) 86.102%
+      );
+  }
+}
+/* 2x images */
+@media screen and (min-resolution: 192dpi),
+  screen and (min-device-pixel-ratio: 2) {
+  .listItem {
+    background: center top 30px no-repeat url('/public/images/qan-image@2x.png'),
+      linear-gradient(
+        142.17deg,
+        rgb(71, 28, 169) -1.144%,
+        rgb(87, 54, 163) 59.141%,
+        rgb(75, 42, 153) 86.102%
+      );
+  }
+  /* .webp */
+  @supports (background: url('/public/images/qan-image@2x.webp')) {
+    .listItem {
+      background: center top 30px no-repeat
+          url('/public/images/qan-image@2x.webp'),
+        linear-gradient(
+          142.17deg,
+          rgb(71, 28, 169) -1.144%,
+          rgb(87, 54, 163) 59.141%,
+          rgb(75, 42, 153) 86.102%
+        );
+    }
+  }
+}
+.listItem::before {
+  position: absolute;
+  top: 214px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 8px;
+  box-shadow: inset 0px 4.39px 3.29px 0px rgb(251, 248, 255),
+    0px 4.39px 4.39px 0px rgba(0, 0, 0, 0.06),
+    inset 0px -2.2px 4.39px 0px rgb(174, 123, 227);
+  background-color: var(--background-color);
 }
 .logoImg {
   position: absolute;
   top: 20px;
   left: 20px;
 }
-.lineWrapper {
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 8px;
-  width: 100%;
-  box-shadow: inset 0px 3.44px 2.58px 0px rgb(251, 248, 255),
-    0px 3.44px 3.44px 0px rgba(0, 0, 0, 0.06),
-    inset 0px -1.72px 3.44px 0px rgb(174, 123, 227);
-  background-color: var(--background-color);
-}
 .avatarWrapper {
   position: absolute;
-  top: 50%;
+  top: 39%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
