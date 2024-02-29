@@ -64,7 +64,7 @@ export const UsersListItem = ({
         <img
           className={s.userAvatar}
           src={avatar}
-          alt="User avatar"
+          alt={user}
           width={65}
           height={65}
         />
