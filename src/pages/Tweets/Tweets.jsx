@@ -1,26 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import throttle from 'lodash.throttle';
 import { toast } from 'react-toastify';
-//
-import {
-  UsersList,
-  LoadMoreBtn,
-  GoBackLink,
-  Filter,
-  Loader,
-  ScrollUpBtn,
-} from 'components';
+
+import { UsersList, LoadMoreBtn, GoBackLink, Filter, Loader } from 'components';
+
 import { getUsers, increasePage } from 'storeRedux';
 import { useUsers } from 'hooks';
-import { getFilterValue } from 'helpers';
-//
+
 import s from './Tweets.module.css';
 
 const Tweets = () => {
   const { isLoading, users, filteredUsers, page, filter, error } = useUsers();
-  const [isVisible, setIsVisible] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -28,9 +19,8 @@ const Tweets = () => {
   const backLinkHref = useRef(location.state?.from ?? '/');
 
   const prevPageRef = useRef(page);
-  const scrollYRef = useRef(0);
 
-  const showLoadMore = page < 5 && filteredUsers.length;
+  const showLoadMore = page < 5 && filteredUsers?.length;
 
   useEffect(() => {
     if (users.length < 3)
@@ -61,19 +51,6 @@ const Tweets = () => {
     }
   }, [dispatch, page]);
 
-  useEffect(() => {
-    const handleScroll = throttle(() => {
-      scrollYRef.current = window.scrollY;
-      setIsVisible(scrollYRef.current > 300);
-    }, 500);
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   const handleLoadMoreClick = () => {
     dispatch(increasePage());
   };
@@ -92,17 +69,16 @@ const Tweets = () => {
               <GoBackLink to={backLinkHref.current} />
               <Filter />
             </div>
-            {!filteredUsers.length && !isLoading ? (
+            {!filteredUsers?.length && !isLoading ? (
               <h2 className={s.title}>
-                No users with status "{getFilterValue(filter)}". Try choosing
-                another filter value.
+                No users with status "{filter}". Try choosing another filter
+                value.
               </h2>
             ) : null}
             <UsersList />
             {showLoadMore ? (
               <LoadMoreBtn onClick={handleLoadMoreClick} />
             ) : null}
-            <ScrollUpBtn isVisible={isVisible} />
           </>
         )}
       </div>

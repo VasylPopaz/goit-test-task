@@ -1,8 +1,8 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-//
-import { Loader } from 'components';
-//
+
+import { Loader, ScrollUpBtn } from 'components';
+
 import s from './SharedLayout.module.css';
 
 export const SharedLayout = () => {
@@ -29,6 +29,7 @@ export const SharedLayout = () => {
           {' '}
           <Outlet />
         </Suspense>
+        <ScrollUpBtn />
       </main>{' '}
     </>
   );

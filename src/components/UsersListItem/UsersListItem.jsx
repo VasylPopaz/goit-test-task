@@ -2,12 +2,12 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { Hourglass } from 'react-loader-spinner';
 import { toast } from 'react-toastify';
-//
+
 import { updateUser } from '../../storeRedux';
 import { getSeparatedNumber } from 'helpers';
-//
+
 import s from './UsersListItem.module.css';
-//
+
 import logoImg1x from '../../assets/images/logo.png';
 import logoImg2x from '../../assets/images/logo@2x.png';
 import logoImg1xWebp from '../../assets/images/logo.webp';

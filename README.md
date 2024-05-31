@@ -1,7 +1,9 @@
 # Tweets App
 
 Welcome to Tweets! This web application allows you to explore tweets from
-various users. ![tweets-app](/public/tweets-img.png)
+various users.
+
+![tweets-app](/public/tweets-img.png)
 
 # Functionality
 

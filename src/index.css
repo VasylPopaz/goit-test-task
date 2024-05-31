@@ -2,6 +2,7 @@
 :root {
   --accent-color: rgb(87, 30, 201);
   --background-color: rgb(235, 216, 255);
+  --active-color: rgb(59, 22, 132);
   --primary-font-color: rgb(55, 55, 55);
 }
 
@@ -83,4 +84,7 @@ img {
   height: 4px;
   border-radius: 10px;
   background-color: white;
+}
+.active-status {
+  background-color: var(--active-color);
 }

@@ -9,14 +9,14 @@ export const selectFilteredUsers = createSelector(
   [selectUsers, selectFilter],
   (users, filter) => {
     switch (filter) {
-      case 'all':
+      case 'Show all':
         return users;
-      case 'follow':
+      case 'Follow':
         return users.filter(user => !user.isFollowing);
-      case 'followings':
+      case 'Followings':
         return users.filter(user => user.isFollowing);
       default:
-        break;
+        return users;
     }
   }
 );

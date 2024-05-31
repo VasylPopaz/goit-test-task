@@ -1,3 +1,4 @@
+export * from './App';
 export * from './SharedLayout/SharedLayout';
 export * from './UsersList/UsersList';
 export * from './UsersListItem/UsersListItem';

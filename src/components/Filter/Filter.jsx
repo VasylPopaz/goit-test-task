@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
-//
+
 import { changeFilter } from 'storeRedux';
 import { useUsers } from 'hooks';
-import { getFilterValue } from 'helpers';
-//
+import { statuses } from 'constants';
+
 import s from './Filter.module.css';
 
 export const Filter = () => {
@@ -46,7 +46,7 @@ export const Filter = () => {
   return (
     <div className={s.filterContainer} ref={dropdownRef}>
       <div className={s.filterToggle} onClick={handleToggle}>
-        {getFilterValue(filter)}
+        {filter}
         {isOpen ? (
           <MdKeyboardArrowUp size={20} onClick={e => handleIconClick(e)} />
         ) : (
@@ -55,21 +55,17 @@ export const Filter = () => {
       </div>
       {isOpen && (
         <ul className={s.list}>
-          <li className={s.listItem} onClick={() => handleOptionClick('all')}>
-            Show all
-          </li>
-          <li
-            className={s.listItem}
-            onClick={() => handleOptionClick('follow')}
-          >
-            Follow
-          </li>
-          <li
-            className={s.listItem}
-            onClick={() => handleOptionClick('followings')}
-          >
-            Followings
-          </li>
+          {statuses.map((item, index) => (
+            <li
+              key={index}
+              className={`${s.listItem} ${
+                item === filter ? 'active-status' : ''
+              }`}
+              onClick={() => handleOptionClick(item)}
+            >
+              {item}
+            </li>
+          ))}
         </ul>
       )}
     </div>

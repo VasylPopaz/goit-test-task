@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FiArrowLeftCircle } from 'react-icons/fi';
-//
+
 import s from './GoBackLink.module.css';
 
 export const GoBackLink = ({ to }) => {

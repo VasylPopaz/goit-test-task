@@ -24,7 +24,7 @@
   }
 }
 .list {
-  padding: 10px 20px;
+  padding: 10px;
   background-color: var(--background-color);
   border-radius: 10.31px;
   overflow: hidden;
@@ -45,7 +45,7 @@
   margin-bottom: 5px;
 }
 .listItem {
-  padding: 4px 8px;
+  padding: 8px;
   border-radius: 10.31px;
   cursor: pointer;
   transition: all 250ms ease-in-out;

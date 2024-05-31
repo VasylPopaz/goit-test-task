@@ -1,6 +1,7 @@
 import { UsersListItem } from 'components';
+
 import { useUsers } from 'hooks';
-//
+
 import s from './UsersList.module.css';
 
 export const UsersList = () => {
