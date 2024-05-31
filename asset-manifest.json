@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/tweets-app/static/css/main.314d36f4.css",
-    "main.js": "/tweets-app/static/js/main.e724a05e.js",
+    "main.css": "/tweets-app/static/css/main.11a91525.css",
+    "main.js": "/tweets-app/static/js/main.9b5450a3.js",
     "static/css/936.9503f310.chunk.css": "/tweets-app/static/css/936.9503f310.chunk.css",
     "static/js/936.59d60b8a.chunk.js": "/tweets-app/static/js/936.59d60b8a.chunk.js",
     "static/css/535.5d988710.chunk.css": "/tweets-app/static/css/535.5d988710.chunk.css",
-    "static/js/535.bbb432eb.chunk.js": "/tweets-app/static/js/535.bbb432eb.chunk.js",
+    "static/js/535.bca6bb99.chunk.js": "/tweets-app/static/js/535.bca6bb99.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/tweets-app/static/media/Montserrat-SemiBold.93b37a465fc4ec0d0415.ttf",
     "static/media/Montserrat-Medium.ttf": "/tweets-app/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
     "static/media/qan-image@2x.png": "/tweets-app/static/media/qan-image@2x.74a3d0a511d2f9354195.png",
@@ -15,15 +15,15 @@
     "index.html": "/tweets-app/index.html",
     "static/media/logo@2x.webp": "/tweets-app/static/media/logo@2x.2725c35adff52472f30b.webp",
     "static/media/logo.webp": "/tweets-app/static/media/logo.726c6bed1803937e3dc8.webp",
-    "main.314d36f4.css.map": "/tweets-app/static/css/main.314d36f4.css.map",
-    "main.e724a05e.js.map": "/tweets-app/static/js/main.e724a05e.js.map",
+    "main.11a91525.css.map": "/tweets-app/static/css/main.11a91525.css.map",
+    "main.9b5450a3.js.map": "/tweets-app/static/js/main.9b5450a3.js.map",
     "936.9503f310.chunk.css.map": "/tweets-app/static/css/936.9503f310.chunk.css.map",
     "936.59d60b8a.chunk.js.map": "/tweets-app/static/js/936.59d60b8a.chunk.js.map",
     "535.5d988710.chunk.css.map": "/tweets-app/static/css/535.5d988710.chunk.css.map",
-    "535.bbb432eb.chunk.js.map": "/tweets-app/static/js/535.bbb432eb.chunk.js.map"
+    "535.bca6bb99.chunk.js.map": "/tweets-app/static/js/535.bca6bb99.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.314d36f4.css",
-    "static/js/main.e724a05e.js"
+    "static/css/main.11a91525.css",
+    "static/js/main.9b5450a3.js"
   ]
 }
