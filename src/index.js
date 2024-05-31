@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { App } from 'components';
+
 import { store } from './storeRedux/store';
 
 import './index.css';
