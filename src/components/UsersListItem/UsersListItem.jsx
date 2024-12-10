@@ -3,15 +3,10 @@ import { useState } from 'react';
 import { Hourglass } from 'react-loader-spinner';
 import { toast } from 'react-toastify';
 
-import { updateUser } from '../../storeRedux';
+import { updateUser } from '../../redux';
 import { getSeparatedNumber } from 'helpers';
 
 import s from './UsersListItem.module.css';
-
-import logoImg1x from '../../assets/images/logo.png';
-import logoImg2x from '../../assets/images/logo@2x.png';
-import logoImg1xWebp from '../../assets/images/logo.webp';
-import logoImg2xWebp from '../../assets/images/logo@2x.webp';
 
 export const UsersListItem = ({
   id,
@@ -45,21 +40,6 @@ export const UsersListItem = ({
 
   return (
     <li className={s.listItem}>
-      <picture>
-        <source
-          srcSet={`${logoImg1xWebp} 1x, ${logoImg2xWebp} 2x`}
-          type="image/webp"
-        />
-        <source srcSet={`${logoImg1x} 1x, ${logoImg2x} 2x`} type="image/png" />
-        <img
-          className={s.logoImg}
-          src={logoImg1x}
-          alt="Logo"
-          width={76}
-          height={22}
-        />
-      </picture>
-
       <div className={s.avatarWrapper}>
         <img
           className={s.userAvatar}

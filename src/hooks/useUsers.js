@@ -7,7 +7,7 @@ import {
   selectIsLoading,
   selectPage,
   selectUsers,
-} from '../storeRedux';
+} from '../redux';
 
 export const useUsers = () => {
   const users = useSelector(selectUsers);

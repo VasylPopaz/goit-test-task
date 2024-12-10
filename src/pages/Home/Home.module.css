@@ -4,16 +4,16 @@
 .homeContainer {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 }
 .title {
   text-align: center;
-  width: 880px;
   color: var(--background-color);
-  font-size: 48px;
+  font-size: 26px;
 }
+
 .link {
   text-align: center;
   padding: 14px 28px;
@@ -33,5 +33,20 @@
     background-color: var(--accent-color);
     color: var(--background-color);
     transform: scale(1.05);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 38px;
+  }
+  .link {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .title {
+    width: 880px;
+    font-size: 48px;
   }
 }

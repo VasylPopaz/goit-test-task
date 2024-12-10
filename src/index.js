@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { App } from 'components';
 
-import { store } from './storeRedux/store';
+import { store } from './redux';
 
 import './index.css';
 

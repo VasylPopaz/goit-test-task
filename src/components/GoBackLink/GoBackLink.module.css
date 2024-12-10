@@ -1,14 +1,11 @@
 .linkWrapper {
   position: relative;
-  display: inline-block;
-  text-align: center;
-  width: 250px;
-  margin-right: 10px;
+  width: 160px;
 }
 .link {
   padding: 10px;
   display: inline-block;
-  width: 200px;
+  width: 100%;
   text-align: center;
   background: var(--background-color);
   border-radius: 10.31px;
@@ -27,6 +24,7 @@
   }
 }
 .icon {
+  display: none;
   width: 50px;
   height: 100%;
   position: absolute;
@@ -48,4 +46,20 @@
 .link:hover + .icon,
 .link:focus + .icon {
   left: -17%;
+}
+@media only screen and (max-width: 374.98px) {
+  .link {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .linkWrapper {
+    width: 250px;
+  }
+  .link {
+    width: 200px;
+  }
+  .icon {
+    display: block;
+  }
 }

@@ -1,55 +1,51 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import { UsersList, LoadMoreBtn, GoBackLink, Filter, Loader } from 'components';
 
-import { getUsers, increasePage } from 'storeRedux';
+import { getUsers, increasePage, resetUsers } from '../../redux';
 import { useUsers } from 'hooks';
 
 import s from './Tweets.module.css';
 
 const Tweets = () => {
-  const { isLoading, users, filteredUsers, page, filter, error } = useUsers();
+  const { isLoading, filteredUsers, page, filter, error } = useUsers();
+  const [isResetDone, setIsResetDone] = useState(false);
 
   const dispatch = useDispatch();
 
   const location = useLocation();
   const backLinkHref = useRef(location.state?.from ?? '/');
 
-  const prevPageRef = useRef(page);
-
   const showLoadMore = page < 5 && filteredUsers?.length;
 
-  useEffect(() => {
-    if (users.length < 3)
-      dispatch(getUsers({ params: { page: 1, limit: 3 } }))
-        .unwrap()
-        .then(() => {})
-        .catch(() =>
-          toast.error('Sorry, something went wrong. Please try again.')
-        );
-  }, [dispatch, users.length]);
+  const fetchUsers = useCallback(() => {
+    const config = {
+      params: {
+        page,
+        limit: 3,
+      },
+    };
+    dispatch(getUsers(config))
+      .unwrap()
+      .then()
+      .catch(() =>
+        toast.error('Sorry, something went wrong. Please try again.')
+      );
+  }, [dispatch, page]);
 
   useEffect(() => {
-    if (prevPageRef.current !== page) {
-      const config = {
-        params: {
-          page,
-          limit: 3,
-        },
-      };
-      dispatch(getUsers(config))
-        .unwrap()
-        .then(() => {
-          prevPageRef.current = page;
-        })
-        .catch(() =>
-          toast.error('Sorry, something went wrong. Please try again.')
-        );
+    dispatch(resetUsers());
+    setIsResetDone(true);
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (isResetDone) {
+      fetchUsers();
     }
-  }, [dispatch, page]);
+  }, [dispatch, fetchUsers, isResetDone]);
 
   const handleLoadMoreClick = () => {
     dispatch(increasePage());
@@ -57,7 +53,7 @@ const Tweets = () => {
 
   return (
     <section className={s.tweets}>
-      {isLoading ? <Loader /> : null}
+      {isLoading && <Loader />}
       <div className={`container`}>
         {error ? (
           <h2 className={s.errorTitle}>
@@ -71,8 +67,8 @@ const Tweets = () => {
             </div>
             {!filteredUsers?.length && !isLoading ? (
               <h2 className={s.title}>
-                No users with status "{filter}". Try choosing another filter
-                value.
+                No users with status "{filter}". Try&nbsp;choosing another
+                filter value.
               </h2>
             ) : null}
             <UsersList />

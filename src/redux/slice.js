@@ -1,5 +1,5 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-//
+
 import { getUsers, updateUser } from './operations';
 
 const initialState = {
@@ -14,6 +14,10 @@ const usersSlice = createSlice({
   name: 'users',
   initialState,
   reducers: {
+    resetUsers: state => {
+      state.users = [];
+      state.page = 1;
+    },
     increasePage: state => {
       state.page += 1;
     },
@@ -43,5 +47,5 @@ const usersSlice = createSlice({
   },
 });
 
-export const { increasePage, changeFilter } = usersSlice.actions;
+export const { resetUsers, increasePage, changeFilter } = usersSlice.actions;
 export const usersReducer = usersSlice.reducer;

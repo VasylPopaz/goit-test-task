@@ -5,7 +5,8 @@
   width: 380px;
   border-radius: 20px;
   box-shadow: -2.58px 6.87px 20.62px 0px rgba(0, 0, 0, 0.23);
-  background: center top 30px no-repeat url('/public/images/qan-image.png'),
+  background: center top 30px no-repeat
+      url('../../assets/images/qan-image.webp'),
     linear-gradient(
       142.17deg,
       rgb(71, 28, 169) -1.144%,
@@ -13,42 +14,24 @@
       rgb(75, 42, 153) 86.102%
     );
 }
-/* .webp */
-@supports (background: url('/public/images/qan-image.webp')) {
+
+@media only screen and (min-width: 768px) and (max-width: 1439.98px) {
   .listItem {
-    background: center top 30px no-repeat url('/public/images/qan-image.webp'),
-      linear-gradient(
-        142.17deg,
-        rgb(71, 28, 169) -1.144%,
-        rgb(87, 54, 163) 59.141%,
-        rgb(75, 42, 153) 86.102%
-      );
+    width: 320px;
   }
 }
-/* 2x images */
-@media screen and (min-resolution: 192dpi),
+
+@media screen and (min-resolution: 1.5dppx),
   screen and (min-device-pixel-ratio: 2) {
   .listItem {
-    background: center top 30px no-repeat url('/public/images/qan-image@2x.png'),
+    background: center top 30px no-repeat
+        url('../../assets/images/qan-image@2x.webp'),
       linear-gradient(
         142.17deg,
         rgb(71, 28, 169) -1.144%,
         rgb(87, 54, 163) 59.141%,
         rgb(75, 42, 153) 86.102%
       );
-  }
-  /* .webp */
-  @supports (background: url('/public/images/qan-image@2x.webp')) {
-    .listItem {
-      background: center top 30px no-repeat
-          url('/public/images/qan-image@2x.webp'),
-        linear-gradient(
-          142.17deg,
-          rgb(71, 28, 169) -1.144%,
-          rgb(87, 54, 163) 59.141%,
-          rgb(75, 42, 153) 86.102%
-        );
-    }
   }
 }
 .listItem::before {
@@ -69,6 +52,7 @@
   left: 20px;
 }
 .avatarWrapper {
+  overflow: hidden;
   position: absolute;
   top: 39%;
   left: 50%;
@@ -85,6 +69,9 @@
   background-color: var(--background-color);
 }
 .userAvatar {
+  object-fit: cover;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
 }
 .descriptionWrapper {
@@ -109,7 +96,6 @@
   border-radius: 10.31px;
   box-shadow: 0px 3.44px 3.44px 0px rgba(0, 0, 0, 0.25);
   background-color: var(--background-color);
-
   color: rgb(55, 55, 55);
   font-size: 18px;
   font-weight: 600;

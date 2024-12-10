@@ -3,16 +3,29 @@
   text-align: center;
 }
 .wrapper {
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 .title {
+  padding-top: 20vh;
   text-align: center;
   color: var(--background-color);
-  font-size: 36px;
+  font-size: 24px;
 }
 .errorTitle {
   text-align: center;
   color: salmon;
-  font-size: 36px;
+  font-size: 24px;
+}
+@media only screen and (max-width: 374.98px) {
+  .wrapper {
+    gap: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .title,
+  .errorTitle {
+    font-size: 36px;
+  }
 }
